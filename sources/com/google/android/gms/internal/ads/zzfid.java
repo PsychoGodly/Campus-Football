@@ -1,0 +1,16 @@
+package com.google.android.gms.internal.ads;
+
+import java.util.concurrent.Callable;
+
+/* compiled from: com.google.android.gms:play-services-ads@@22.0.0 */
+public final /* synthetic */ class zzfid implements Callable {
+    public final /* synthetic */ zzfii zza;
+
+    public /* synthetic */ zzfid(zzfii zzfii) {
+        this.zza = zzfii;
+    }
+
+    public final Object call() {
+        return this.zza.zzd();
+    }
+}

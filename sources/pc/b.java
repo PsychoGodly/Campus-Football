@@ -1,0 +1,53 @@
+package pc;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.a0;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicBoolean;
+import lc.d;
+
+/* compiled from: AuthStateChannelStreamHandler */
+public class b implements d.C0413d {
+
+    /* renamed from: a  reason: collision with root package name */
+    private final FirebaseAuth f37037a;
+
+    /* renamed from: b  reason: collision with root package name */
+    private FirebaseAuth.a f37038b;
+
+    public b(FirebaseAuth firebaseAuth) {
+        this.f37037a = firebaseAuth;
+    }
+
+    /* access modifiers changed from: private */
+    public static /* synthetic */ void b(AtomicBoolean atomicBoolean, Map map, d.b bVar, FirebaseAuth firebaseAuth) {
+        if (atomicBoolean.get()) {
+            atomicBoolean.set(false);
+            return;
+        }
+        a0 m10 = firebaseAuth.m();
+        if (m10 == null) {
+            map.put("user", (Object) null);
+        } else {
+            map.put("user", g3.i(m10).d());
+        }
+        bVar.success(map);
+    }
+
+    public void g(Object obj) {
+        FirebaseAuth.a aVar = this.f37038b;
+        if (aVar != null) {
+            this.f37037a.r(aVar);
+            this.f37038b = null;
+        }
+    }
+
+    public void h(Object obj, d.b bVar) {
+        HashMap hashMap = new HashMap();
+        hashMap.put("appName", this.f37037a.l().q());
+        a aVar = new a(new AtomicBoolean(true), hashMap, bVar);
+        this.f37038b = aVar;
+        this.f37037a.e(aVar);
+    }
+}

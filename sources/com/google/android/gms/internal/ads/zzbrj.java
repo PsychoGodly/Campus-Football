@@ -1,0 +1,10 @@
+package com.google.android.gms.internal.ads;
+
+import android.os.IBinder;
+
+/* compiled from: com.google.android.gms:play-services-ads-lite@@22.0.0 */
+public final class zzbrj extends zzasv implements zzbrl {
+    zzbrj(IBinder iBinder) {
+        super(iBinder, "com.google.android.gms.ads.internal.purchase.client.IInAppPurchaseListener");
+    }
+}
